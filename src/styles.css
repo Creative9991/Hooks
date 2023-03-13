@@ -1,0 +1,62 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.Example-Flex {
+  display: flex;
+}
+
+.Example-Grid {
+  display: grid;
+}
+
+.One,
+.Two,
+.Three,
+.Four,
+.Five {
+  width: "300px";
+  height: "200px";
+}
+
+.One > p {
+  color: red;
+}
+
+.Six,
+.Seven,
+.Eight,
+.Nine,
+.Ten {
+  width: "300px";
+  height: "200px";
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.list {
+  display: flex;
+  flex-grow: 4;
+}
+
+.myList {
+  width: 150px;
+  text-decoration: none;
+  border-style: solid;
+}
