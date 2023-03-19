@@ -66,7 +66,7 @@ const Javascript = () => {
       "d",
       "d",
       "d",
-      "d"
+      "d",
     ];
     const myArrayWithNoDuplicates = myArray.reduce(
       (previousValue, currentValue) => {
@@ -269,7 +269,7 @@ const Javascript = () => {
   var myDetails = {
     fullName: "Mukesh",
     firstName: "Mukeshreddy",
-    lastName: "Katipally"
+    lastName: "Katipally",
   };
 
   var myNewDetails = myDetails;
@@ -299,13 +299,13 @@ then even if changed some value inside newly created object the original value c
   var myBio = {
     dateOfMonth: "September",
     dateOfYear: 1992,
-    date: 9
+    date: 9,
   };
 
   var myNewBio = {
     dateOfMonth: myBio.dateOfMonth,
     dateOfYear: myBio.dateOfYear,
-    date: myBio.date
+    date: myBio.date,
   };
 
   myNewBio.date = 8;
@@ -379,6 +379,88 @@ a pure function, reducing side effects will make your code better to manage and 
   console.log(sayPure(7, 6));
 
   /// --------------------------------
+
+  /// ------------------- Class - Javascript //////////////////
+
+  const myClass = class {
+    constructor(name, height) {
+      this.name = name;
+      this.height = height;
+    }
+  };
+
+  class RectangleOne {
+    construtor(name, height) {
+      this.name = name;
+      this.height = height;
+    }
+  }
+
+  const myNewClass = class RectangleTwo {
+    constructor(name, height) {
+      this.name = name;
+      this.height = height;
+    }
+  };
+
+  //BOdy of the class
+
+  /* Kind: Getter, setter, method, or field
+Location: Static or instance
+Visibility: Public or private */
+
+  //Constructor is the place where we can intialize the object of the class
+
+  // THere is only one constuctor should be in the class, if we specify more than one constructor we get an error saying syntax error
+
+  //Static initialization
+
+  //Getter
+
+  class Rectanular {
+    constructor(height, width) {
+      this.height = height;
+      this.width = width;
+    }
+
+    get calculate() {
+      return this.getCalculate();
+    }
+
+    getCalculate() {
+      return this.height * this.width;
+    }
+  }
+
+  let newOutput = new Rectanular(10, 10);
+
+  console.log(newOutput.calculate);
+
+  //----------------------------Inheritence concept and Super class in javascript------------------------------------
+
+  class Dog {
+    constructor(name) {
+      this.name = name;
+    }
+
+    speak() {
+      console.log(`${this.name}, is a dog name`);
+    }
+  }
+
+  class Puppy extends Dog {
+    constructor(name) {
+      super(name);
+    }
+
+    speak() {
+      console.log(`${this.name}, is a dog name`);
+    }
+  }
+
+  const frooty = new Puppy("Parota");
+
+  frooty.speak();
 
   return <div className="my-javascript"></div>;
 };
